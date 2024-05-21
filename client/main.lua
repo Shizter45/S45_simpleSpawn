@@ -25,6 +25,10 @@ end)
 
 -- Logic For Spawn/Uber
 CreateThread(function()
+  while not NetworkIsSessionStarted() do
+    Wait(500)
+	end
+    
   while true do
     Wait(0)
     for k, v in pairs(Config.Locations) do
